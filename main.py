@@ -39,5 +39,16 @@ def con(input_value):
     return response_text
 
 
-resss = con('python program print 1 to 10')
-print(resss)
+def chatbot():
+    print("Chatbot: Hello! How can I assist you today?")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() == "exit":
+            print("Chatbot: Goodbye!")
+            break
+        response = con(user_input)
+        print("Bot:", response)
+
+
+# Start the chatbot
+chatbot()

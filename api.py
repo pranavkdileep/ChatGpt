@@ -1,4 +1,7 @@
+from flask import Flask, request, jsonify
 import requests
+
+app = Flask(__name__)
 
 def con(input_value):
     url = 'https://ora.ai/api/conversation'
@@ -39,19 +42,12 @@ def con(input_value):
     return response_text
 
 
-def chatbot():
-    print("Bot: Hello! How can I assist you today?")
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() == "exit":
-            print("Chatbot: Goodbye!")
-            break
-
-        print("Bot: Generating...")
-        response = con(user_input)
-        
-        print("Bot:", response)
+@app.route('/chat', methods=['GET'])
+def chat():
+    input_value = request.args.get('input')
+    response = con(input_value)
+    return response
 
 
-# Start the chatbot
-chatbot()
+if __name__ == '__main__':
+    app.run()

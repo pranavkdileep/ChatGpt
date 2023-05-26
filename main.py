@@ -19,8 +19,8 @@ def con(input_value):
         'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'
     }
 
-    chatbot_id = '75e3853d-5e7c-4535-b813-0340b748852d'
-    user_id = 'auto:d0a78854-26c9-4e23-9e05-e065a0432dda'
+    chatbot_id = '4e67085c-93a2-4f99-a858-288c0600226b'
+    user_id = 'auto:1acacac3-3324-4336-8b18-60ea1cee9777'
 
     data = {
         'chatbotId': chatbot_id,

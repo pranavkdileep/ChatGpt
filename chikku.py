@@ -31,7 +31,7 @@ def con(input_value):
         'includeHistory': True
     }
 
-    response = requests.post(url, headers=headers, json=data)
+    response = requests.post(url, headers=headers, json=data , timeout=5000)
     response_data = response.json()
 
     # Extract and return the response
@@ -47,10 +47,10 @@ def chatbot():
             print("Chatbot: Goodbye!")
             break
 
-        print("Bot: Generating...")
+        print("Chikku: Generating...")
         response = con(user_input)
         
-        print("Bot:", response)
+        print("Chikku:", response)
 
 
 # Start the chatbot

@@ -58,7 +58,7 @@ def chatgpt_clone(input, history):
     history = history or []
     s = list(sum(history, ()))
     s.append(input)
-    inp = ' '.join(s)
+    
     output = con(input)
     history.append((input, output))
     return history, history

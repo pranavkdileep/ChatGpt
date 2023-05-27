@@ -1,4 +1,4 @@
 openai
 gradio
 requests
-gunicorn
+Gunicorn
